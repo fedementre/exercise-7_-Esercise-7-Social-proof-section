@@ -1,0 +1,279 @@
+// -------CSS RESET------------
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// ------------CSS RESET END-------------
+
+
+@import "variables";
+@import "mixins";
+
+
+body{
+    font-family: $font-family;
+    
+}
+
+// HEADER SETTINGS
+header{
+    padding: 3.75rem 1.875rem 0rem 1.875rem;
+}
+
+main, footer{
+    padding: 0rem 1.875rem 0.625rem 1.875rem;
+}
+
+.title-section>h1{
+    color: $dark-magenta;
+    font-weight: 800;
+    font-size: 2.5em;
+    text-align: center;
+    line-height: 0.9em;
+    
+}
+
+.paragraph-section{
+    color: $dark-grey-magenta;
+    font-weight: 500;
+    text-align: center;
+    margin: $margin-box;
+    font-size: 1.2em;
+    
+}
+
+
+// SHORT REVIEWS SETTINGS
+
+.rating-stars{
+    display: flex;
+    justify-content:center;
+    gap: 0.625rem;
+    margin-bottom: 0.625rem;
+    
+}
+
+.short-rating-box{
+    max-width: 100%;
+    background-color: $light-grey-magenta;
+    border-radius: 0.625rem;
+    padding: 0.7rem;
+    text-align: center;
+    margin: $margin-box;
+}
+
+.short-text{
+    color: $dark-magenta;
+    font-size: 0.7em;
+}
+
+
+// LONG REVIEWS SETTINGS
+
+.box-review{
+    max-width: 100%;
+    border-radius: 0.625rem;
+    background-color: $dark-magenta;
+    padding: 2.1875rem 1.875rem;
+    margin: $margin-box;
+}
+
+.box-review-header{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1.25rem;
+    font-size: 0.8em;
+}
+
+.profile-picture{
+    max-width: 2.5rem;
+    margin-right: 1.30rem;
+}
+
+.profile-picture>img{
+    border-radius: 50%;
+
+}
+
+.profile-text>.profile-name{
+    color: $white;
+}
+
+.profile-text> .verified{
+    color: $pink-text;
+    font-weight: 100;
+    
+}
+
+.review-paragraph{
+    color: white;
+}
+
+.attribution{
+    font-size: 0.8em;
+    text-align: center;
+
+}
+
+
+@media screen and (min-width: 1060px) {
+  
+
+  body{
+    padding: 2rem 5rem;
+ 
+    
+  }
+  header{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+  }
+
+  
+  .title-section>h1{
+    font-size: 3em; 
+    text-align: start;
+    flex-wrap: wrap;
+  }
+  
+  .title-section{
+    max-width: 25rem;
+  }
+
+  .paragraph-section{
+    max-width: 28.125rem;
+  }
+  
+.paragraph-section{
+  text-align: start;
+  flex-wrap: wrap;
+}
+
+.short-rating-box{
+  display: flex;
+  max-height: 2.5rem;
+  align-items: center;
+  padding: 1.5625rem 2rem;
+ 
+}
+
+.rating-stars{
+  margin-bottom: 0;
+  margin-right: 3.125rem;
+}
+
+.short-text{
+  text-align:left;
+}
+
+
+#short-rating1{
+position: relative;
+right: 6.25rem;
+}
+
+
+
+#short-rating2{
+  position: relative;
+  right: 3.125rem;
+  }
+
+  
+
+
+main{
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  
+}
+
+.box-review{
+  max-height: 250px;
+}
+
+#box-review2{
+margin-top: 2rem;
+}
+
+#box-review3{
+  margin-top: 4rem;
+  }
+
+
+}
